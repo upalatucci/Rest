@@ -1,4 +1,7 @@
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import javax.persistence.*;
 
 
@@ -6,52 +9,60 @@ import javax.persistence.*;
 public class Eventi implements Serializable {
 
     @Id
-    private int idEmployee;
+    private int id;
 
-    private String email;
+    private String nome;
 
-    private String firstname;
+    private Date data;
 
-    private String lastname;
+
+    @OneToMany
+    private List<Studenti> partecipanti = new ArrayList<>();
 
     public Eventi() {
     }
 
-    public int getIdEmployee() {
-        return this.idEmployee;
+    public String getNome() {
+        return this.nome;
     }
 
-    public void setIdEmployee(int idEmployee) {
-        this.idEmployee = idEmployee;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getEmail() {
-        return this.email;
+    public Date getData() {
+        return this.data;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setData(Date data) {
+        this.data = data;
     }
 
-    public String getFirstname() {
-        return this.firstname;
+    public int getId() {
+        return this.id;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public String getLastname() {
-        return this.lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public int setId(int id) {
+        return this.id = id;
     }
 
     @Override
     public String toString() {
-        return "Employee [idEmployee=" + idEmployee + ", email=" + email
-                + ", firstname=" + firstname + ", lastname=" + lastname + "]";
+        return "Employee [id=" + id + ", nome=" + nome
+                + ", cognome=" + data +"]";
     }
+
+
+    public List<Studenti> getPartecipanti() {
+        return partecipanti;
+    }
+
+    public void setPartecipanti(List<Studenti> partecipanti) {
+        this.partecipanti = partecipanti;
+    }
+
+    public boolean addPartecipanti(Studenti partecipante){
+        return this.partecipanti.add(partecipante);
+    }
+
 }
