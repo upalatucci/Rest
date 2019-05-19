@@ -1,3 +1,5 @@
+package data;
+
 import data.Eventi;
 import data.Studenti;
 
