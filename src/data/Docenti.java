@@ -1,9 +1,11 @@
+package data;
+
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Studenti {
+public class Docenti {
     private int id;
 
     @Id

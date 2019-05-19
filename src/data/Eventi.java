@@ -1,3 +1,5 @@
+package data;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -6,6 +8,7 @@ import javax.persistence.*;
 
 
 @Entity
+@NamedQuery(name="data.Eventi.findAll", query="SELECT e FROM Eventi e")
 public class Eventi implements Serializable {
 
     @Id

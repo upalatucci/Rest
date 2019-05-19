@@ -8,6 +8,7 @@
       <root url="jar://$PROJECT_DIR$/lib/javax.resource.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/javax.servlet.jsp.jstl.jar!/" />
       <root url="file://$USER_HOME$/Downloads/mysql-connector-java-8.0.16" />
+      <root url="jar://$USER_HOME$/Downloads/jsr311-api-1.1.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
